@@ -6,11 +6,10 @@ import dominio.*;
 import javax.swing.*;
 
 public class Principal implements Serializable {
-    static Funcionario funcionarios = new Funcionario();
-    Cliente cliente = new Cliente();
     public static void main(String[] args){
         menu();
     }
+    
     public static void menu(){
         int sair = 1;
         //1 - Cadastrar Funcionario
@@ -28,7 +27,7 @@ public class Principal implements Serializable {
                     "\n9 - Sair \nDigite a opcao desejada:  "));
             switch (menu){
                 case 1:
-                    funcionarios.adicionarFuncionario(cadastrarFuncionario());
+                    cadastrarFuncionario();
                 case 2:
 
 
@@ -37,26 +36,27 @@ public class Principal implements Serializable {
 
     }
 
-    private static Funcionario cadastrarFuncionario(){
+    private static void cadastrarFuncionario(){
         Funcionario funcionario = new Funcionario();
         funcionario.setNome(JOptionPane.showInputDialog("Nome: "));
         funcionario.setCpf(JOptionPane.showInputDialog("Cpf: "));
         funcionario.setIdade(JOptionPane.showInputDialog("Idade: "));
-        (JOptionPane.showInputDialog("Telefone: "));
+        funcionario.contato.setTelefone(JOptionPane.showInputDialog("Telefone: "));
         funcionario.contato.setEmail(JOptionPane.showInputDialog("Email: "));
         funcionario.endereco.setEstado(JOptionPane.showInputDialog("Estado: "));
         funcionario.endereco.setCidade(JOptionPane.showInputDialog("Cidade: "));
         funcionario.endereco.setBairro(JOptionPane.showInputDialog("Bairro: "));
         funcionario.endereco.setRua(JOptionPane.showInputDialog("Rua: "));
         funcionario.endereco.setNumero(JOptionPane.showInputDialog("Número"));
-        return funcionario;
+        funcionario.adicionarFuncionario(funcionario);
     }
 
-    private static Cliente cadastrarCliente(){
+    //aplicar a mesma logica de funcionarios
+    private static void cadastrarCliente(){
         Cliente cliente = new Cliente();
         cliente.setNome(JOptionPane.showInputDialog("Nome: "));
         cliente.setCpf(JOptionPane.showInputDialog("Cpf: "));
         cliente.setIdade(JOptionPane.showInputDialog("Idade: "));
-        return cliente;
+//        return cliente;
     }
 }

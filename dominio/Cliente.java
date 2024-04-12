@@ -5,11 +5,9 @@ import java.util.ArrayList;
 public class Cliente extends Pessoa {
     private ArrayList<Cliente> clientes = new ArrayList<>();
 
-    public Cliente(){}
+    //adicionar atributos de clientes
 
-    public Cliente(String nome, String cpf, String idade){
-        super(nome, cpf, idade);
-    }
+    // criar os construtores
 
     public ArrayList<Cliente> getClientes(){
         return this.clientes;

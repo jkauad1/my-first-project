@@ -4,20 +4,15 @@ import java.util.ArrayList;
 
 public class Funcionario extends Pessoa {
 
-    public Contato contato;
-    public Endereco endereco;
     private String dataAdmissao; //Dia em que o funcionario foi contratado
     private double salario;
     private ArrayList<Funcionario> funcionarios = new ArrayList<>(); //Array de funcionarios
 
     public Funcionario(){}
 
-    public Funcionario(String nome, String cpf, String idade,String dataAdmissao, double salario, Contato contato, Endereco endereco){
-        super(nome, cpf, idade);
+    public Funcionario(String dataAdmissao, double salario){
         this.dataAdmissao = dataAdmissao;
         this.salario = salario;
-        this.contato = contato;
-        this.endereco = endereco;
     }
 
     public void setFuncionarios(ArrayList<Funcionario> funcionarios) {
