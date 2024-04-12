@@ -6,7 +6,7 @@ public abstract class Pessoa {
     private String cpf;
     private String idade;
 
-    public Contato contato = new Contato("", "");
+    public Contato contato = new Contato();
     public Endereco endereco = new Endereco();
 
     public Pessoa(){} //Construtor vazio

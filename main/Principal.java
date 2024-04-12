@@ -52,11 +52,11 @@ public class Principal implements Serializable {
     }
 
     //aplicar a mesma logica de funcionarios
-    private static void cadastrarCliente(){
-        Cliente cliente = new Cliente();
-        cliente.setNome(JOptionPane.showInputDialog("Nome: "));
-        cliente.setCpf(JOptionPane.showInputDialog("Cpf: "));
-        cliente.setIdade(JOptionPane.showInputDialog("Idade: "));
-//        return cliente;
-    }
+//    private static void cadastrarCliente(){
+//        Cliente cliente = new Cliente();
+//        cliente.setNome(JOptionPane.showInputDialog("Nome: "));
+//        cliente.setCpf(JOptionPane.showInputDialog("Cpf: "));
+//        cliente.setIdade(JOptionPane.showInputDialog("Idade: "));
+////        return cliente;
+//    }
 }
