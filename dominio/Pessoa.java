@@ -1,26 +1,22 @@
 package dominio;
 
 
-public class Pessoa {
+public abstract class Pessoa {
     private String nome;
     private String cpf;
     private String idade;
 
+    public Contato contato = new Contato("", "");
+    public Endereco endereco = new Endereco();
+
     public Pessoa(){} //Construtor vazio
 
-    public Pessoa(String nome, String cpf, String idade){
+    public Pessoa(String nome, String cpf, String idade, Contato contato, Endereco endereco){
         this.nome = nome;
         this.cpf = cpf;
         this.idade = idade;
-    }
-
-    @Override
-    public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", idade='" + idade + '\'' +
-                '}';
+        this.contato = contato;
+        this.endereco = endereco;
     }
 
     public void imprimir(){
@@ -51,4 +47,14 @@ public class Pessoa {
         this.idade = idade;
     }
 
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", idade='" + idade + '\'' +
+                ", contato=" + contato +
+                ", endereco=" + endereco +
+                '}';
+    }
 }
