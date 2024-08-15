@@ -18,7 +18,7 @@ public class Main {
 
     public static void menu() {
         int sair = 1;  /* A condição de parada do menu é o 0 para sair do laço. Todos a lógica que seria
-        usada com o Scanner e o System.out.print é substítuida pelas funções da biblioteca javax. */
+        usada com o Scanner e o System.out.print é substítuida pelas funções da biblioteca javax.*/
 
         while (sair != 0) {
             int menu = Integer.parseInt(JOptionPane.showInputDialog("MENU " +
